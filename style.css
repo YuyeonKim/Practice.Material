@@ -1,0 +1,184 @@
+#welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-repeat: no-repeat;
+  /* background-size: 100vw 100vh; */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("background1.png");
+  color: aliceblue;
+  font-size: 25px;
+}
+
+#game-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 100vw;
+  height: 100vh;
+  scroll-behavior: smooth;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-image: url("background.png");
+  color: aliceblue;
+  font-size: 25px;
+}
+
+#result-header {
+  padding: 15px 0px 0px 0px;
+}
+
+.info {
+  background-color: rgba(0, 0, 0, 0.623);
+  padding: 20px;
+  border-radius: 12px;
+  color: aliceblue;
+}
+
+section {
+  flex-direction: column;
+  /* min-width: 100vw; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* .deck {
+  display: flex;
+  gap: 20px;
+} */
+
+.card-container {
+  width: auto;
+  height: 100vh;
+  /* text-align: center; */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  grid-template-columns: repeat(4, 90px); /* Fix: added missing 2nd argument */
+  grid-template-rows: repeat(4, 100px); /* Optional: 'auto' or '1fr' */
+  row-gap: 28px;
+  column-gap: 35px;
+  /* padding: 0px 0px 0px 0px; */
+  max-width: 100px;
+  margin: -10%;
+}
+
+/* .dropbox {
+  border: 1px dashed #e5e5cb30;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.856);
+} */
+
+.card {
+  /* width: 100vw;
+  height: 100vh; */
+  /* width: 100%; */
+  /* aspect-ratio: 2 / 3; */
+  cursor: grab;
+  position: relative;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  /* this is important the flip wont work without preserve-3d */
+  /* border-radius: 12px; */
+  /* align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  display: grid; */
+  /* /* box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); */
+  /* grid-template-columns: repeat(4, 50px); Fix: added missing 2nd argument */
+  /* grid-template-rows: repeat(4, 50px);   Optional: 'auto' or '1fr' */
+  /* row-gap: 80px;
+  column-gap: 40px;
+  padding: 90px;
+  max-width: 100px;
+  margin: 0 auto; */
+
+  justify-content: center;
+}
+
+.card:hover {
+  transform: scale(0.98);
+}
+
+.card-face {
+  position: absolute;
+  /* width: 100%; */
+  /* height: 100px; */
+  backface-visibility: hidden;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card-face img {
+  width: 80px;
+  height: 120px;
+  object-fit: cover;
+  display: block;
+}
+.card-face.front {
+  justify-content: center;  
+}
+
+.card-face.back {
+  transform: rotateY(180deg);
+}
+
+.flip {
+  rotate: y 180deg;
+}
+
+#cover {
+  cursor: pointer;
+  transition: scale 0.4s ease;
+}
+
+#cover:hover {
+  scale: 1.1;
+}
+
+/* footer {
+  display: flex;
+  justify-content: center;
+color: aqua;
+} */
+
+.reset-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+}
+
+#reset-button {
+  justify-content: center;
+  font-size: 20px;
+  padding: 10px 20px;
+}
+
+button {
+  background-color: #f8aad6;
+  padding: 5px 20px;
+  font-size: 1.4rem;
+  border-radius: 12px;
+  border: none;
+  color: #281027;
+  transition: scale 0.4s ease, background-color 0.4s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  scale: 0.9;
+  background-color: #8d587f9c;
+}
+
+body {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+}
